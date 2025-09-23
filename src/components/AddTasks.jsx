@@ -20,7 +20,16 @@ function AddTask({onAddTaskSubmit}) {
                 value={description}
                 onChange={(event) => setDescription(event.target.value)}
             />
-            <button className="bg-slate-500 text-white px-4 py-2 rounded-md font-medium" onClick={()=> onAddTaskSubmit(title,description)}>
+            <button 
+            // verificar se os campos não estão vazios
+            className="bg-slate-500 text-white px-4 py-2 rounded-md font-medium" onClick={()=>{
+                if(!title || !description){
+                    return alert("Por favor, preencha todos os campos")
+                }
+                onAddTaskSubmit(title, description)
+                setTitle("")
+                setDescription("")
+            }}>
                 Adicionar
             </button>
         </div>
