@@ -10,7 +10,27 @@ function App() {
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks))
 
-  }, [tasks])
+  }, [tasks]);
+
+
+
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      //  Chamar a API
+      const response = await fetch("https://jsonplaceholder.typicode.com/todos?_limit=10", {
+        method: "GET"
+      });
+      // Pegar os dados da API
+      const data = await response.json();
+      console.log(data);
+
+      // Armezenar/Persistir esses dados no state
+      setTasks(data);
+    }
+    // Se quiser ,vocẽ pode chamar uma API para pegar as tarefas;
+    // fetchTasks();
+  }, [])
 
 
 
