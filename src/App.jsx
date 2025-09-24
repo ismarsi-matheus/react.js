@@ -43,8 +43,8 @@ function App() {
     setTasks(newTasks)
   }
 
-  function onAddTaskSubmit(title, description){
-    const newTask={
+  function onAddTaskSubmit(title, description) {
+    const newTask = {
       id: v4(),
       title,
       description,
@@ -62,7 +62,7 @@ function App() {
           Gerenciador de Tarefas
         </h1>
         <AddTask onAddTaskSubmit={onAddTaskSubmit} />
-        <Tasks tasks={tasks} onTaskClick={onTaskClick} onDeleteTaskClick={onDeleteTaskClick}/>
+        <Tasks tasks={tasks} onTaskClick={onTaskClick} onDeleteTaskClick={onDeleteTaskClick} />
       </div>
     </div>
   );

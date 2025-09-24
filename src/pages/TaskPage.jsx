@@ -10,7 +10,7 @@ function TaskPage() {
         <div className="w-screen h-screen bg-slate-500 p-6">
 
             <div className="flex justify-center relative">
-                <button onClick={()=> navigate(-1)}    className="absolute left-0 top-0 bottom-0 text-slate-100" >
+                <button onClick={()=> navigate(-2)}    className="absolute left-0 top-0 bottom-0 text-slate-100" >
                     <ChevronLeftIcon />
                 </button >
                 <h1 className="text-3xl text-slate-100 font-bold text-center">
